@@ -1,0 +1,199 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Icon.png">
+    <title>Personal WebPage</title>
+    <style>
+    h1{
+        background-color: #371a58;
+        color: white;
+    }
+    body{
+        background-color: white;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #371a58;
+    }
+    li {
+        float: left;
+        font-size: 20px;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 24px 16px;
+        text-decoration: none;
+    }
+    li a:hover:not(.active) {
+        background-color: #5f3194;
+    }
+    .active {
+        background-color: #771edd;
+    }
+
+    .Content{
+        background-color: #e3d1f8;
+        font-family: monospace;
+        font-size: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .centered {
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #371a58;
+        padding: 20px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+    #myLogo:hover{
+        cursor:pointer;
+    }
+    footer {
+        margin-top: 80px;
+        background-color: #371a58;
+        padding: 3px;
+        text-align: center;
+        color: white;
+    }
+    #tbl1 {
+      font-family: Arial, Helvetica, sans-serif;
+      border-collapse: collapse;
+      width: 90%;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    #tbl1 td, #tbl1 th {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #tbl1 tr:nth-child(even){
+      background-color: #f2f2f2;
+    }
+
+    #tbl1 tr:hover {
+      background-color: #ddd;
+    }
+
+    #tbl1 th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #371a58;
+      color: white;
+    }
+    </style>
+</head>
+<body>
+
+    <!--navbar-->
+    <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a class="active" href="#education">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li style="float: right;margin-right: 20px;"><img id="myLogo" src="images/Icon.png" width="70" onclick="logo()"></li>
+    </ul>
+
+    <a id="education"></a>
+
+    <div class="container">
+      <img src="images/bg4.jpg" width="1500px" height="500px">
+      <div class="centered">Education</div>
+    </div>
+
+    <!--content 1-->
+    <center>
+      <div class="Content">
+        <p>This page contains my educations.</p>
+      </div>
+    </center>
+
+    <br>
+
+    <!--tell story-->
+    <center>
+    <table id="tbl1">
+      <tr>
+        <th>Logo</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><img src="images/education/img1.jpg" width="400px"></td>
+        <td rowspan="5">
+          <p style="font-size: 20px;"><b>
+            First of all for my education background its quite complicated ish.
+            But its very simple. In my highschool years I spent my time at Sekolah Menengah Kebangsaan Mahsuri for 5 straight years and
+            earning my Sijil Pelajaran Malaysia(SPM). After that tried for Form 6 program at same highschool. But just for a week 
+            I received the letter for enrollment into Community College, Langkawi Branch. Taking culinary arts program. 
+            For about a month I studied I received an email regarding Mengubah Destini Anak Bangsa(MDAB). After six months of hardship 
+            is bestow (unofficially) The Dean’s List for getting 3.90 CGPA.
+            Furthermore, I entered Universiti Teknologi Mara Kedah Branch and currently taking Diploma in Information Management program.
+            </b>
+          </p>
+        </td>
+      </tr>
+      <tr>
+        <td><img src="images/education/img2.jpg" width="400px"></td>
+      </tr>
+      <tr>
+        <td><img src="images/education/img3.png" width="400px"></td>
+      </tr>
+      <tr>
+        <td><img src="images/education/img4.jpg" width="400px"></td>
+      </tr>
+      <tr>
+        <td><img src="images/education/img5.jpg" width="400px"></td>
+      </tr>
+    </table>
+    </center>
+
+    <footer>
+      <div style="border:solid white;margin-bottom:50px;margin-top:50px;margin-left: 400px;margin-right: 400px;">
+      <p style="font-size: 20px;"><b>Quote of the day:</b></p>
+      <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">You BECOME</p>
+      <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">what you BELIEVE.</p><p style="font-size: 50px;">&#128512;</p>
+      </div>
+    </footer>
+
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      function logo(){
+            window.location.href='index.html';
+        }
+    </script>
+
+</body>
+</html>

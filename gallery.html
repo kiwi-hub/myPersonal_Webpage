@@ -1,0 +1,164 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/Icon.png">
+    <title>Personal WebPage</title>
+    <style>
+    h1{
+        background-color: #371a58;
+        color: white;
+    }
+    body{
+        background-color: white;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #371a58;
+    }
+    li {
+        float: left;
+        font-size: 20px;
+    }
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 24px 16px;
+        text-decoration: none;
+    }
+    li a:hover:not(.active) {
+        background-color: #5f3194;
+    }
+    .active {
+        background-color: #771edd;
+    }
+    .Content{
+        background-color: #e3d1f8;
+        font-family: monospace;
+        font-size: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    .centered {
+        font-size: 50px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #371a58;
+        padding: 20px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    }
+    #myLogo:hover{
+        cursor:pointer;
+    }
+    footer {
+        margin-top: 100px;
+        background-color: #371a58;
+        padding: 3px;
+        text-align: center;
+        color: white;
+    }
+    .img-row{
+      margin: 100px;
+    }
+    .img-half{
+      display: flex;
+      width: 300px;
+    }
+    </style>
+</head>
+<body>
+
+    <!--navbar-->
+    <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html">Biodata</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="family.html">Family</a></li>
+        <li><a class="active" href="#gallery">Gallery</a></li>
+        <li style="float: right;margin-right: 20px;"><img id="myLogo" src="images/Icon.png" width="70" onclick="logo()"></li>
+    </ul>
+
+    <a id="gallery"></a>
+
+    <div class="container">
+      <img src="images/bg4.jpg" width="1500px" height="500px">
+      <div class="centered">Gallery</div>
+    </div>
+
+    <!--content 1-->
+    <center>
+      <div class="Content">
+        <p>This page contains all of my favourite pictures.</p>
+      </div>
+    </center>
+
+    <!--gallery images-->
+    <div class="img-row">
+      <div class="img-half">
+        <img src="images/gallery/familyPic.jpg" style="width:100%;">
+        <img src="images/gallery/img1.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+        <img src="images/gallery/img2.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+        <img src="images/gallery/me4.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+      </div>
+  
+      <div class="img-half">
+        <img src="images/gallery/img3.jpg" style="width:100%;margin-top: 20px;">
+        <img src="images/gallery/img4.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+        <img src="images/gallery/img5.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+        <img src="images/gallery/me5.jpeg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+      </div>
+
+      <div class="img-half">
+        <img src="images/gallery/me1.jpg" style="width:100%;margin-top: 20px;">
+        <img src="images/gallery/me2.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+        <img src="images/gallery/me3.jpg" style="width:100%;margin-left: 20px;margin-top: 20px;">
+      </div>
+    </div>
+
+    <footer>
+      <div style="border:solid white;margin-bottom:50px;margin-top:50px;margin-left: 400px;margin-right: 400px;">
+      <p style="font-size: 20px;"><b>Quote of the day:</b></p>
+      <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Your only LIMIT is</p>
+      <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">your MIND.</p><p style="font-size: 50px;">&#128512;</p>
+      </div>
+    </footer>
+
+
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+      function logo(){
+            window.location.href='index.html';
+      }
+    </script>
+
+</body>
+</html>
