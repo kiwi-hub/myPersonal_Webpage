@@ -6,15 +6,24 @@
     <style>
     *{
         padding:0;
-        margin : 0 ;
+        margin :0;
         box-sizing:border-box;
-     }
+    }
+    html{
+        scroll-behavior: smooth;
+    }
     h1{
         background-color: #371a58;
         color: white;
     }
     body{
         background-color: black;
+    }
+    /**
+    * ! navbar
+    **/
+    #navbar{
+        z-index: 5;
     }
     ul {
         list-style-type: none;
@@ -64,12 +73,11 @@
         display: flex;
     }
 
-    imgg {
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        background: rgb(21, 68, 139);
-        padding: 20px;
+    /**
+    * ! introduce
+    **/ 
+    .intro{
+        display: flex;
     }
 
     article {
@@ -149,6 +157,32 @@
         background-color: #a566ec;
         color: white;
         }
+    /**
+    * ! footer content
+    **/
+    .footer-content{
+        border:solid white;
+        margin: 50px auto;
+        width: 70%;
+        padding: 10px;
+    }
+    
+    /**
+    * ! media query
+    **/
+    @media screen and (max-width:1200px) {
+        footer .footer-content{
+            width: 90%;
+        }
+        .section-container{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .intro{
+            flex-direction: column;
+        }
+    }
     </style>
 </head>
 <body>
@@ -179,19 +213,19 @@
 
     <!--image 1-->
     <div class="container">
-        <img src="images/img1.jpg" width="1500px" height="500px">
+        <img src="images/img1.jpg" width="100%" height="500px">
         <div class="centered">Home</div>
         <div class="top"><marquee><img src="images/jet.png" width="150px"></marquee></div></div>
     </div>
 
     <section>
-        <imgg>
-            <img src="images/myPic.jpeg" style="border-radius: 50%;" width="400px" height="400px">
-        </imgg>
-        <article>
-          <p>Hi Assalamualaikum, my name is Haikal and I am from IM110.<br><br>This website is all about me. There are 5 contents which consists of biodata,
-            experience, education, family and gallery. <br><br>Have a great day!</p>
-        </article>
+        <div class="intro">
+            <img src="images/myPic.jpeg" style="border-radius: 50%;margin: 0 auto;padding: 10px;" width="300px" height="300px" >
+            <article>
+                <p>Hi Assalamualaikum, my name is Haikal and I am from IM110.<br><br>This website is all about me. There are 5 contents which consists of biodata,
+                experience, education, family and gallery. <br><br>Have a great day!</p>
+            </article>
+        </div>
     </section>
 
     <hr>
@@ -199,10 +233,10 @@
     
     <section >
         <a id="contentss"></a>
-        <article style="background-color: white;">
-            <center><h2 style="color: black;">Contents</h2></center>
+        <article style="background-color: white;width: 90% ;">
+            <center><h2 style="color: black;">Contents</h2></center><br>
 
-            <div style="display: flex;">
+            <div class="section-container" style="display: flex;gap:10px;">
 
                 <div style="background-color: white;text-align: center;width: 400px;border-radius: 8px;margin-left: 50px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);"">
                     <h3 style="color: black;">Experience</h3>
@@ -229,10 +263,10 @@
 
 
     <footer>
-        <div style="border:solid white;margin-bottom:50px;margin-top:50px;margin-left: 400px;margin-right: 400px;">
-        <p style="font-size: 20px;"><b>Quote of the day:</b></p>
-        <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Life is not about FINDING yourself,</p>
-        <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Life is about CREATING yourself.</p><p style="font-size: 50px;">&#128512;</p>
+        <div class="footer-content">
+            <p style="font-size: 20px;"><b>Quote of the day:</b></p>
+            <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Life is not about FINDING yourself,</p>
+            <p style="font-size: 30px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Life is about CREATING yourself.</p><p style="font-size: 50px;">&#128512;</p>
         </div>
     </footer>
 
