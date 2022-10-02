@@ -1,0 +1,147 @@
+/**
+* ! signup style
+**/
+
+.signup{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    z-index: 100;  
+}
+
+.signup::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    opacity: .5;
+    z-index: -1;
+    
+}
+.signup-popUp{
+    color: #001233;
+    background: #ffffff;
+    position: relative;
+    width: 60%;
+    height: 70%;
+    margin: 70px auto;
+    border-radius: 8px;
+    border: 5px solid #001233;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px black, 0 6px 8px grey;
+}
+
+/**
+* ! top signup style
+**/
+
+.top-signup{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-signup .bi-x-lg, .top-signup .bi-arrow-left{
+    font-size: 20px;
+    cursor: pointer;
+    color: #001233;
+    margin-right: 10px;
+}
+/**
+* ! signup information style
+**/
+
+.signup-form{
+    margin-top: 20px;
+    padding: 15px;
+}
+.signup-item,.signup-item-date{
+    margin: 10px auto;
+}
+.signup-item label,.signup-item-date label{
+    float: left;
+    margin: 10px auto;
+}
+.signup-item input,.signup-item-date input{
+    width: 50%;
+    font-size: 18px;
+    padding: 5px;
+    transition: .3s;
+}
+.signup-item input:focus,.signup-item-date input:focus{
+    outline: 4px solid #001233;
+    background:#caf0f8;
+    color: #001233;
+    width: 80%;
+}
+.signup-item-date{
+    padding-bottom: 20px;
+}
+.signup-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+.signup-btn input{
+    background:#caf0f8;
+    color: #001233;
+    width: 15%;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 5px;
+    border: 3px solid#001233;
+}
+.signup-btn input:hover{
+    color:#caf0f8;
+    background: #001233;
+}
+.signup-btn input[type="button"]{
+    background: #c9184a;
+    color: #ffffff;
+}
+.signup-btn input[type="button"]:hover{
+    background: #ff758f;
+}
+/**
+* ! phone size
+**/
+@media screen and (max-width:1000px) {
+    .signup-popUp{
+        width: 90%;
+        height: 90%;
+        margin: 20px auto;
+    }
+    .signup-item{
+        width: 100%;
+    }
+    .signup-form input[type="submit"]{
+        width: 100%;
+    }
+    .signup-item label,.signup-item-date label{
+        float: none;
+    }
+    .signup-item input,.signup-item-date input{
+        width: 100%;
+        font-size: 14px;
+    }
+    .signup-item input:focus,.signup-item-date input:focus{
+        width: 100%;
+    }
+    .signup-btn{
+        flex-direction: column;
+        gap: 1px;
+        padding: 0;
+    }
+    .signup-btn input{
+        width: 100%;
+    }
+}

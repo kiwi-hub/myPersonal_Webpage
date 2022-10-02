@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.clearfix{
+    content: "";
+    display: table;
+    clear: both;
+}
+.title{
+    text-align: center;
+    padding: 20px;
+}
+
+/**
+* ! To top button
+**/
+
+.toTop{
+    display: none;
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    right: 0;
+    margin: 0 30px 70px 0;
+    font-size: 25px;
+    background: #001233;
+    color: #caf0f8;
+    padding: 10px;
+    border: 2px solid #caf0f8;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/**
+* ! top
+**/
+
+.top{
+    background: url(../images/img4.jpg)no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+.top::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #001233;
+    background-image: linear-gradient(#001233,#caf0f8); 
+    opacity: .8;
+    z-index: -1;
+}
+
+/**
+* ! navbar
+**/
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    height: 115px;
+    overflow: hidden;
+    position: relative;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: #caf0f8;
+    cursor: pointer;
+}
+.buttons{
+    display: block;
+    margin-right: 50px;
+}
+ul{
+    list-style: none;
+}
+li{
+    float: left;
+}
+a{
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    background: #001233;
+    color: #caf0f8;
+    margin: 10px;
+    border-radius: 8px;
+    transition: .2s;
+    width: 150px;
+    text-align: center;
+}
+a:hover{
+    color: #001233;
+    background: #caf0f8;
+}
+
+/**
+* ! burger
+**/
+
+.burger{
+    display: none;
+    background: #001233;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.burger > div{
+    background: #caf0f8;
+    width: 30px;
+    height: 3px;
+    transition: .2s;
+}
+.burger > div:not(:nth-child(1)){
+    margin-top: 5px;
+}
+
+/**
+* ! booking
+**/
+.booking-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+}
+.booking{
+    width: 30%;
+    text-align: center;
+    color: #001233;
+    background: #caf0f8;
+    padding: 20px;
+    border-radius: 8px;
+    border: 5px solid #001233;
+    cursor: pointer;
+    transition: .3s;
+}
+.booking:hover{
+    color: #caf0f8;
+    background: #001233;
+    transform: scale(1.2);
+}
+
+/**
+* ! Service
+**/
+
+.service{
+    height: 100%;
+    background: #caf0f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.service-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.item{
+    height: 600px;
+    min-width: 30%;
+    margin-bottom: 50px;
+    overflow: hidden;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 5px solid black;
+    box-shadow: 0 4px 8px black, 0 6px 8px grey;
+}
+@media screen and (max-width:1200px) {
+    .item{
+        height: 700px;
+    }
+}
+.item img{
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.item h3{
+    padding: 10px;
+}
+.item p {
+    padding: 20px;
+    line-height: 1.6em;
+    text-align: left;
+}
+
+/**
+* ! About 
+**/
+
+.about{
+    min-height: 100vh;
+    background: url(../images/img3.jpg) no-repeat center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 10px;
+}
+.about-container{
+    background: transparent;
+    text-align: center;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:10px auto;
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+.about-container::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background:#001233;
+    opacity: .5;
+    z-index: -1;
+}
+.about-container img{
+    width: 70%;
+}
+.about-container p{
+    line-height: 1.6em;
+    padding: 20px;
+}
+
+/**
+* ! Contact Us 
+**/
+
+.contact-us{
+    min-height: 100vh;
+}
+.contact-us-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    height: 80vh;
+}
+.map{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.information{
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.info-buttons{
+    font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.info-buttons a{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    padding: 0;
+    width: fit-content;
+    margin: 0;
+    color: #001233;
+}
+.info-btn-item{
+    border:3px solid #001233;
+    padding: 5px;
+    border-radius: 8px;
+}
+.info-btn-item:hover{
+    color:#90e0ef;
+    cursor: pointer;
+    border:3px solid #90e0ef;
+}
+.info a{
+    display: block;
+    padding: 0;
+    text-decoration: none;
+    background: transparent;
+    color: #001233;
+    margin: 0;
+    border-radius: 0;
+    transition: 0;
+    width: auto;
+    text-align: left;
+}
+.info a:hover{
+    color: #90e0ef;
+}
+.info-item{
+    display: flex;
+    gap: 20px;
+    line-height: 3em;
+}
+.bar{
+    height: 100%;
+    width: 5px;
+    background:#001233;
+    padding-right: 10px;
+    margin: 20px;
+}
+/**
+* ! Footer 
+**/
+
+.footer{
+    background: #001233;
+    color: #caf0f8;
+    padding: 50px;
+}
+.footer-container{
+    text-align: center;
+    
+}
+.footer-booking-container{
+    display: flex;
+    height: 60%;
+    width: 100%;
+}
+.footer-booking{
+    margin: 20px auto;
+    text-align: center;
+    color: #001233;
+    background: #caf0f8;
+    padding: 20px;
+    border-radius: 8px;
+    border: 5px solid #caf0f8;
+    cursor: pointer;
+    transition: .3s;
+}
+.footer-booking:hover{
+    color: #caf0f8;
+    background: #001233;
+}
+
+
+/**
+* ! phone size
+**/
+@media screen and (max-width:1000px) {
+    .navbar{
+        overflow: visible;
+    }
+    .logo{
+        font-size: 10px;
+        gap: 10px;
+    }
+    .buttons{
+        display: none;
+    }
+    .burger{
+        display: block;
+    }
+    .booking{
+        width: 50%;
+    }
+
+    .change .line1{
+        transform: rotate(45deg) translate(5px,6px);
+    }
+    .change .line2{
+        opacity: 0;
+    }
+    .change .line3{
+        transform: rotate(-45deg) translate(5px,-6px);
+    }
+
+    /**
+    *  ! start click burger
+    **/
+    .displayItem.body{
+        overflow: hidden;
+    }
+    .displayItem.buttons {
+        display: block;
+        background: red;
+        position: absolute;
+        width: 100%;
+        z-index: 99;
+    }
+    .displayItem.buttons ul{
+        position: absolute;
+        background: #001233;
+        width: 100%;
+        top: 60px;
+        height: 78vh;
+        text-align: center;
+    }
+    
+    .displayItem.buttons li{
+        float: none;
+    }
+    .displayItem.buttons a{
+        background-color: 001233;
+        width: 100%;
+        margin: 20px auto;
+        border-radius: 0;
+    }
+    /**
+    *  ! end click burger
+    **/
+
+    .service-container{
+        flex-direction: column;
+    }
+    .item{
+        height: 690px;
+    }
+    .about-container{
+        width: 60%;
+    }
+    .contact-us{
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+    }
+    .contact-us-container{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .information{
+        display: block;
+        background: transparent;
+        padding: 20px;
+        margin: 30px;
+    }
+    .bar{
+        width: 100%;
+        height: 5px;
+    }
+    .footer{
+        margin-top: 20px;
+    }
+}

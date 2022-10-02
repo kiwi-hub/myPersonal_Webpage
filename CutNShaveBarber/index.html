@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/login.css">
+    <link rel="stylesheet" href="src/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <title>Cut 'N' Shave Barber</title>
+</head>
+<body id="body" class="body">
+
+    <!-- Button Return Top -->
+    <div class="toTop" title="Return to top" id="toTop" onclick="toTop()">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- Top -->
+    <div class="top">
+        <div class="navbar">
+            <div class="logo" onclick="returnToHome()">
+                <img width="120px" src="images/logo.png" alt="logo">
+                <h1>Cut 'N' Shave Barber</h1>
+            </div>
+
+            <!-- burger -->
+            <div class="burger" id="burger" onclick="burgerClick()">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="buttons" id="buttons">
+                <ul>
+                    <li><a href="#service-id" onclick="closeNav()">Services</a></li>
+                    <li><a href="#about-id" onclick="closeNav()">About</a></li>
+                    <li><a href="#contact-us-id" onclick="closeNav()">Contact Us</a></li>
+                    <li><a href="#" onclick="appearPopUp()">Login</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Booking -->
+        <div class="booking-container">
+            <div class="booking" onclick="appearPopUp2()">
+                <h3>Book an appointment now !</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login pop up -->
+    <div class="login" id="login">
+        <div class="login-popUp">
+
+            <div class="top-login">
+                <h2>User Login</h2>
+                <i class="bi bi-x-lg" onclick="closePopUp()"></i>
+            </div>
+
+            <div class="login-form">
+                <form action="" method="post">
+                    <div class="login-item">
+                        <i class="bi bi-person-circle"></i>
+                        <input type="text" name="username" id="username_id" placeholder="Username" required><br><br>
+                    </div>
+                    <div class="login-item">
+                        <i class="bi bi-lock"></i>
+                        <input type="password" name="password" id="password_id" placeholder="Password" required><br><br>
+                    </div>
+
+                    <div class="login-btn">
+                        <input type="submit" value="Login">
+                        <input type="reset" value="Reset">
+                    </div>
+                    
+                </form>
+            </div>
+
+            <div class="bar-login"></div>
+
+            <div class="other-info">
+                <a href="#">Forgot Passsord?</a>
+                <p>Don't have an account?</p>
+                <a href="#" onclick="signupAppear()">Sign Up</a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- Sign Up pop up -->
+    <div class="signup" id="signup">
+        <div class="signup-popUp">
+
+            <div class="top-signup">
+                <i class="bi bi-arrow-left" title="Return to login page" onclick="returnToLogin()"></i>
+                <h2>Create an account</h2>
+                <i class="bi bi-x-lg" title="Close pop up" onclick="closePopUp()"></i>
+            </div>
+
+            <div class="signup-form">
+                <form action="#" method="post">
+                    <div class="signup-item">
+                        <label for="fullname">Fullname : </label>
+                        <input type="text" title="write your fullname" name="fullname" id="fullname" required><br><br>
+                    </div>
+                    <div class="signup-item-date">
+                        <label for="birthdate">Birth Date : </label>
+                        <input type="date" title="Birthdate" name="birthdate" id="birthdate">
+                    </div>
+                    <div class="signup-item">
+                        <label for="username">Username : </label>
+                        <input type="text" title="Create your username" name="username" id="username" required><br><br>
+                    </div>
+                    <div class="signup-item">
+                        <label for="password">Password : </label>
+                        <input type="password" title="Create your password" name="password" id="password" required><br><br>
+                    </div>
+                    
+                    <div class="signup-btn">
+                        <input type="submit" value="SignUp">
+                        <input type="reset" value="Reset">
+                        <input type="button" value="Cancel" onclick="closePopUp()">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service -->
+    <div class="service" id="service-id">
+        <div class="title">
+            <h2>Services</h2>
+        </div>
+        <div class="service-container">
+            <div class="item">
+                <h3>Haircut</h3>
+                <img src="images/haircut1.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ex ipsum modi optio asperiores nesciunt at? Ab dicta tempore est dolore aperiam consectetur voluptate vitae, aut illo. Cum corporis ab non ullam ut illo pariatur sapiente assumenda enim mollitia porro praesentium a quis alias hic, expedita reiciendis in est voluptate dolore </p>
+            </div>
+            <div class="item">
+                <h3>Shave</h3>
+                <img src="images/shave1.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ex ipsum modi optio asperiores nesciunt at? Ab dicta tempore est dolore aperiam consectetur voluptate vitae, aut illo. Cum corporis ab non ullam ut illo pariatur sapiente assumenda enim mollitia porro praesentium a quis alias hic, expedita reiciendis in est voluptate dolore</p>
+            </div>
+            <div class="item">
+                <h3>Beard Trim</h3>
+                <img src="images/beard1.jpg" alt="img">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ex ipsum modi optio asperiores nesciunt at? Ab dicta tempore est dolore aperiam consectetur voluptate vitae, aut illo. Cum corporis ab non ullam ut illo pariatur sapiente assumenda enim mollitia porro praesentium a quis alias hic, expedita reiciendis in est voluptate dolore </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About -->
+    <div class="about" id="about-id">
+        <div class="title">
+            <h2>About</h2>
+        </div>
+        <div class="about-container">
+            <img src="images/logo.png" alt="logo">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga deserunt cupiditate dolorum delectus illum quis nemo cum sed optio rem eos nam asperiores unde eius eum est, fugiat consequatur. At sed esse harum veniam quidem similique fuga, deleniti accusantium ducimus ad sit odio, quas labore est explicabo eveniet et alias.</p>
+        </div>
+    </div>
+
+    <!-- Contact Us -->
+    <div class="contact-us" id="contact-us-id">
+        <div class="title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="contact-us-container">
+
+            <!-- Map -->
+            <div class="map">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=melaka&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        <a href="https://123movies-to.org"></a><br>
+                        <style>
+                            .mapouter{border:3px solid black;padding:20px;position:relative;text-align:center;}
+                        </style>
+                        <a href="https://www.embedgooglemap.net">google map html</a>
+                        <style>
+                            .gmap_canvas {overflow:hidden;background:none;height:500px;width:500px;}
+                        
+                            @media screen and (max-width:800px) {
+                                .gmap_canvas {height:300px;width:300px;}
+                            }
+                    
+                        </style>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bar"></div>
+
+            <!-- information -->
+            <div class="information">
+
+                <div class="info">
+                    <div class="info-item">
+                        <h3><i class="bi bi-geo-alt"></i></h3>
+                        <p>999 JALAN KOTA , MELAKA, MALAYSIA </p>
+                    </div>
+                    <div class="info-item">
+                        <h3><i class="bi bi-envelope"></i></h3>
+                        <a href="mailto:CutNShaveBarber@gmail.com">CutNShaveBarber@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <h3><i class="bi bi-telephone"></i></h3>
+                        <p>012-3456789</p>
+                    </div>
+                    
+                </div>
+
+                <div class="info-buttons">
+                    
+                        <!-- Whatsapp -->
+                        <a href="https://wa.me/0123456789">
+                            <div class="info-btn-item">
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                        </a>
+
+                        <!-- Telegram -->
+                        <a href="https://telegram.me/CutNShaveBarber">
+                            <div class="info-btn-item">
+                                <i class="bi bi-telegram"></i>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="http://www.instagram.com/CutNShaveBarber">
+                            <div class="info-btn-item">
+                                <i class="bi bi-instagram"></i>
+                            </div>
+                        </a>
+                        
+                    
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+        <!-- <div class="title">
+            <h2>Footer</h2>
+        </div> -->
+        <div class="footer-container">
+
+            <!-- Booking -->
+            <div class="footer-booking-container">
+                <div class="footer-booking" onclick="appearPopUp2()">
+                    <h3>Book an appointment now !</h3>
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="text">
+                <p><i class="bi bi-c-circle"></i> Copyright 2022</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="src/main.js"></script>
+<script src="src/login.js"></script>
+</html>
