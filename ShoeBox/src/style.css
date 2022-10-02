@@ -537,9 +537,12 @@ span{
     }
     .details-cart{
         width: 90%;
+        height: fit-content;
+        flex-direction: column;
     }
     .details-cart img{
-        width: 100px;
+        width:90%;
+        margin: 0 auto;
     }
     .top-content{
         width: 100%;
